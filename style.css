@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(loginbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 350px; /* Adjusted width */
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #00abc2;
+  pointer-events: none; /* Prevent icon from interfering with input focus */
+}
+
+.input-group input {
+  width: calc(100% - 40px); /* Adjust width to account for icon */
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 40px; /* Align label with input padding */
+  top: 10px;
+  font-size: 16px;
+  color: #888; /* Lighter gray color */
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px; /* Move label up on focus */
+  font-size: 12px;
+  color: #00abc2;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 0;
+  background: #00abc2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #006653;
+}
+
+.or {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+}
+
+.icons i {
+    font-size: 1.5rem;
+    color: #00abc2;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.links p {
+  font-size: 14px;
+  color: #888;
+}
+
+.links a {
+  color: #00abc2;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.recover {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+.recover a {
+  color: #00abc2;
+  text-decoration: none;
+}
+
+.recover a:hover {
+  text-decoration: underline;
+}
+
+/* Hide signup form initially */
+.signup-form {
+  display: none;
+}
+
+/* Show/hide forms with JavaScript */
+#showSignup {
+  display: block;
+}
+
+#showLogin {
+  display: none;
+}
+
+#showSignup:checked ~ .signup-form {
+  display: block;
+}
+
+#showSignup:checked ~ .login-form {
+  display: none;
+}
+
+
+
+
+
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
